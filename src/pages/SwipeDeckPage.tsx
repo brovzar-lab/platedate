@@ -2,7 +2,9 @@ import { useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useSwipeStore } from '../stores/swipeStore';
+import { useSwipe } from '../hooks/useSwipe';
 import { useRestaurantDeck } from '../hooks/useRestaurantDeck';
+import { useMatches } from '../hooks/useMatches';
 import { SwipeCard } from '../components/SwipeCard';
 import { CuisineFilter } from '../components/CuisineFilter';
 import { DemoBanner } from '../components/DemoBanner';
@@ -11,27 +13,35 @@ import { isDemoMode } from '../lib/demo';
 import restaurants from '../data/austinRestaurants.json';
 import type { Restaurant } from '../types/restaurant';
 
-const allRestaurants = restaurants as Restaurant[];
+const demoRestaurants = restaurants as Restaurant[];
 
 export function SwipeDeckPage() {
-  const { currentPartnerId, swipe, togglePartner, pendingMatch, matches } = useSwipeStore();
-  const { deck, cuisines, cuisineFilter, setCuisineFilter } = useRestaurantDeck(allRestaurants);
+  const { currentPartnerId, togglePartner } = useSwipeStore();
+  const { recordSwipe } = useSwipe();
+  const { deck, cuisines, cuisineFilter, setCuisineFilter, loading } =
+    useRestaurantDeck(demoRestaurants);
+  const { matchedRestaurants, pendingMatch, dismissMatch } =
+    useMatches(demoRestaurants);
   const [swipingId, setSwipingId] = useState<string | null>(null);
-
-  const pendingRestaurant = pendingMatch
-    ? allRestaurants.find((r) => r.id === pendingMatch)
-    : null;
 
   const handleSwipe = useCallback(
     (restaurantId: string, decision: 'yes' | 'no') => {
       setSwipingId(restaurantId);
-      swipe(restaurantId, decision);
+      recordSwipe(restaurantId, decision).catch(console.error);
       setTimeout(() => setSwipingId(null), 300);
     },
-    [swipe]
+    [recordSwipe]
   );
 
   const topCards = deck.slice(0, 3);
+
+  if (loading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-rose-50 via-white to-amber-50">
+        <div className="h-8 w-8 animate-spin rounded-full border-4 border-rose-200 border-t-rose-500" />
+      </div>
+    );
+  }
 
   return (
     <div className="flex min-h-screen flex-col bg-gradient-to-br from-rose-50 via-white to-amber-50">
@@ -45,35 +55,38 @@ export function SwipeDeckPage() {
             className="relative rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-slate-700 shadow-sm hover:bg-rose-50 hover:text-rose-600"
           >
             Matches
-            {matches.length > 0 && (
+            {matchedRestaurants.length > 0 && (
               <span className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-rose-500 text-[10px] font-bold text-white">
-                {matches.length}
+                {matchedRestaurants.length}
               </span>
             )}
           </Link>
-          <button
-            onClick={togglePartner}
-            className="flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-sm font-semibold shadow-sm hover:bg-slate-50"
-          >
-            <span
-              className={`rounded-full px-2 py-0.5 text-xs transition-colors ${
-                currentPartnerId === 'partner1'
-                  ? 'bg-rose-500 text-white'
-                  : 'text-slate-400'
-              }`}
+
+          {isDemoMode && (
+            <button
+              onClick={togglePartner}
+              className="flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-sm font-semibold shadow-sm hover:bg-slate-50"
             >
-              P1
-            </span>
-            <span
-              className={`rounded-full px-2 py-0.5 text-xs transition-colors ${
-                currentPartnerId === 'partner2'
-                  ? 'bg-rose-500 text-white'
-                  : 'text-slate-400'
-              }`}
-            >
-              P2
-            </span>
-          </button>
+              <span
+                className={`rounded-full px-2 py-0.5 text-xs transition-colors ${
+                  currentPartnerId === 'partner1'
+                    ? 'bg-rose-500 text-white'
+                    : 'text-slate-400'
+                }`}
+              >
+                P1
+              </span>
+              <span
+                className={`rounded-full px-2 py-0.5 text-xs transition-colors ${
+                  currentPartnerId === 'partner2'
+                    ? 'bg-rose-500 text-white'
+                    : 'text-slate-400'
+                }`}
+              >
+                P2
+              </span>
+            </button>
+          )}
         </div>
       </header>
 
@@ -144,7 +157,9 @@ export function SwipeDeckPage() {
               </button>
               <div className="text-center">
                 <p className="text-xs font-medium text-slate-400">
-                  {deck.length} left for {currentPartnerId === 'partner1' ? 'Partner 1' : 'Partner 2'}
+                  {deck.length} left
+                  {isDemoMode &&
+                    ` for ${currentPartnerId === 'partner1' ? 'Partner 1' : 'Partner 2'}`}
                 </p>
               </div>
               <button
@@ -158,7 +173,9 @@ export function SwipeDeckPage() {
         )}
       </div>
 
-      {pendingRestaurant && <MatchReveal restaurant={pendingRestaurant} />}
+      {pendingMatch && (
+        <MatchReveal restaurant={pendingMatch} onDismiss={dismissMatch} />
+      )}
     </div>
   );
 }

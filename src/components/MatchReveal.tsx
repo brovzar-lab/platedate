@@ -1,19 +1,18 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import type { Restaurant } from '../types/restaurant';
-import { useSwipeStore } from '../stores/swipeStore';
 import { isDemoMode } from '../lib/demo';
 
 interface MatchRevealProps {
   restaurant: Restaurant;
+  onDismiss: () => void;
 }
 
-export function MatchReveal({ restaurant }: MatchRevealProps) {
+export function MatchReveal({ restaurant, onDismiss }: MatchRevealProps) {
   const navigate = useNavigate();
-  const dismissMatch = useSwipeStore((s) => s.dismissMatch);
 
   const handleViewDetails = () => {
-    dismissMatch();
+    onDismiss();
     navigate(`/restaurant/${restaurant.id}`);
   };
 
@@ -22,9 +21,6 @@ export function MatchReveal({ restaurant }: MatchRevealProps) {
       `https://www.google.com/maps/search/?api=1&query=${restaurant.lat},${restaurant.lng}`,
       '_blank'
     );
-    if (isDemoMode) {
-      alert('Demo mode — not saved');
-    }
   };
 
   return (
@@ -99,7 +95,7 @@ export function MatchReveal({ restaurant }: MatchRevealProps) {
                 View Details
               </button>
               <button
-                onClick={dismissMatch}
+                onClick={onDismiss}
                 className="w-full px-4 py-2 text-sm text-slate-400 transition-colors hover:text-slate-600"
               >
                 Keep Swiping

@@ -5,10 +5,10 @@ import { RestaurantCard } from '../components/RestaurantCard';
 import restaurants from '../data/austinRestaurants.json';
 import type { Restaurant } from '../types/restaurant';
 
-const allRestaurants = restaurants as Restaurant[];
+const demoRestaurants = restaurants as Restaurant[];
 
 export function MatchedListPage() {
-  const matchedRestaurants = useMatches(allRestaurants);
+  const { matchedRestaurants } = useMatches(demoRestaurants);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-rose-50 via-white to-amber-50">
