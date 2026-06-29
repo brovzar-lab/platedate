@@ -15,7 +15,11 @@
     "imageUrl": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=800",
     "tier": "unclaimed",
     "claimedByUserId": null,
-    "stats": { "impressions": 0, "swipeRights": 0, "matches": 0 }
+    "stats": {
+      "impressions": 0,
+      "swipeRights": 0,
+      "matches": 0
+    }
   },
   {
     "id": "launderette",
@@ -33,7 +37,11 @@
     "imageUrl": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800",
     "tier": "unclaimed",
     "claimedByUserId": null,
-    "stats": { "impressions": 0, "swipeRights": 0, "matches": 0 }
+    "stats": {
+      "impressions": 0,
+      "swipeRights": 0,
+      "matches": 0
+    }
   },
   {
     "id": "lenoir",
@@ -51,7 +59,11 @@
     "imageUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800",
     "tier": "unclaimed",
     "claimedByUserId": null,
-    "stats": { "impressions": 0, "swipeRights": 0, "matches": 0 }
+    "stats": {
+      "impressions": 0,
+      "swipeRights": 0,
+      "matches": 0
+    }
   },
   {
     "id": "la-condesa",
@@ -69,7 +81,11 @@
     "imageUrl": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800",
     "tier": "unclaimed",
     "claimedByUserId": null,
-    "stats": { "impressions": 0, "swipeRights": 0, "matches": 0 }
+    "stats": {
+      "impressions": 0,
+      "swipeRights": 0,
+      "matches": 0
+    }
   },
   {
     "id": "perlas",
@@ -87,7 +103,11 @@
     "imageUrl": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800",
     "tier": "unclaimed",
     "claimedByUserId": null,
-    "stats": { "impressions": 0, "swipeRights": 0, "matches": 0 }
+    "stats": {
+      "impressions": 0,
+      "swipeRights": 0,
+      "matches": 0
+    }
   },
   {
     "id": "loro",
@@ -105,7 +125,11 @@
     "imageUrl": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800",
     "tier": "unclaimed",
     "claimedByUserId": null,
-    "stats": { "impressions": 0, "swipeRights": 0, "matches": 0 }
+    "stats": {
+      "impressions": 0,
+      "swipeRights": 0,
+      "matches": 0
+    }
   },
   {
     "id": "emmer-and-rye",
@@ -123,7 +147,11 @@
     "imageUrl": "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800",
     "tier": "unclaimed",
     "claimedByUserId": null,
-    "stats": { "impressions": 0, "swipeRights": 0, "matches": 0 }
+    "stats": {
+      "impressions": 0,
+      "swipeRights": 0,
+      "matches": 0
+    }
   },
   {
     "id": "veracruz-all-natural",
@@ -141,7 +169,11 @@
     "imageUrl": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800",
     "tier": "unclaimed",
     "claimedByUserId": null,
-    "stats": { "impressions": 0, "swipeRights": 0, "matches": 0 }
+    "stats": {
+      "impressions": 0,
+      "swipeRights": 0,
+      "matches": 0
+    }
   },
   {
     "id": "franklin-bbq",
@@ -159,7 +191,11 @@
     "imageUrl": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800",
     "tier": "unclaimed",
     "claimedByUserId": null,
-    "stats": { "impressions": 0, "swipeRights": 0, "matches": 0 }
+    "stats": {
+      "impressions": 0,
+      "swipeRights": 0,
+      "matches": 0
+    }
   },
   {
     "id": "uchiko",
@@ -177,7 +213,11 @@
     "imageUrl": "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800",
     "tier": "unclaimed",
     "claimedByUserId": null,
-    "stats": { "impressions": 0, "swipeRights": 0, "matches": 0 }
+    "stats": {
+      "impressions": 0,
+      "swipeRights": 0,
+      "matches": 0
+    }
   },
   {
     "id": "juniper",
@@ -195,7 +235,11 @@
     "imageUrl": "https://images.unsplash.com/photo-1559847844-5315695dadae?w=800",
     "tier": "unclaimed",
     "claimedByUserId": null,
-    "stats": { "impressions": 0, "swipeRights": 0, "matches": 0 }
+    "stats": {
+      "impressions": 0,
+      "swipeRights": 0,
+      "matches": 0
+    }
   },
   {
     "id": "ramen-tatsu-ya",
@@ -213,7 +257,11 @@
     "imageUrl": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800",
     "tier": "unclaimed",
     "claimedByUserId": null,
-    "stats": { "impressions": 0, "swipeRights": 0, "matches": 0 }
+    "stats": {
+      "impressions": 0,
+      "swipeRights": 0,
+      "matches": 0
+    }
   },
   {
     "id": "odd-duck",
@@ -231,7 +279,11 @@
     "imageUrl": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800",
     "tier": "unclaimed",
     "claimedByUserId": null,
-    "stats": { "impressions": 0, "swipeRights": 0, "matches": 0 }
+    "stats": {
+      "impressions": 0,
+      "swipeRights": 0,
+      "matches": 0
+    }
   },
   {
     "id": "justines",
@@ -249,7 +301,11 @@
     "imageUrl": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800",
     "tier": "unclaimed",
     "claimedByUserId": null,
-    "stats": { "impressions": 0, "swipeRights": 0, "matches": 0 }
+    "stats": {
+      "impressions": 0,
+      "swipeRights": 0,
+      "matches": 0
+    }
   },
   {
     "id": "birdie-s",
@@ -267,6 +323,120 @@
     "imageUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800",
     "tier": "unclaimed",
     "claimedByUserId": null,
-    "stats": { "impressions": 0, "swipeRights": 0, "matches": 0 }
+    "stats": {
+      "impressions": 0,
+      "swipeRights": 0,
+      "matches": 0
+    }
+  },
+  {
+    "id": "perry-s-steakhouse",
+    "name": "Perry's Steakhouse & Grille",
+    "cuisine": "Steakhouse",
+    "priceRange": "$$$$",
+    "address": "114 W 7th St, Austin TX 78701",
+    "lat": 30.2691,
+    "lng": -97.7468,
+    "city": "austin-tx",
+    "state": "TX",
+    "hours": "Mon-Sat 5-11pm, Sun 5-10pm",
+    "phone": "(512) 555-1024",
+    "menuUrl": "https://example.com/menu/perry-s-steakhouse",
+    "imageUrl": "https://images.unsplash.com/photo-1558030006-450675393462?w=800",
+    "tier": "unclaimed",
+    "claimedByUserId": null,
+    "stats": {
+      "impressions": 0,
+      "swipeRights": 0,
+      "matches": 0
+    }
+  },
+  {
+    "id": "thai-fresh",
+    "name": "Thai Fresh",
+    "cuisine": "Thai",
+    "priceRange": "$",
+    "address": "909 W Mary St, Austin TX 78704",
+    "lat": 30.2476,
+    "lng": -97.7548,
+    "city": "austin-tx",
+    "state": "TX",
+    "hours": "Mon-Sat 11am-9pm, Sun 11am-8pm",
+    "phone": "(512) 494-6436",
+    "menuUrl": "https://thai-fresh.com",
+    "imageUrl": "https://images.unsplash.com/photo-1562802378-063ec186a863?w=800",
+    "tier": "unclaimed",
+    "claimedByUserId": null,
+    "stats": {
+      "impressions": 0,
+      "swipeRights": 0,
+      "matches": 0
+    }
+  },
+  {
+    "id": "g-ji-korean-bbq",
+    "name": "G-Ji Korean BBQ",
+    "cuisine": "Korean",
+    "priceRange": "$$",
+    "address": "3421 E Cesar Chavez St, Austin TX 78702",
+    "lat": 30.2536,
+    "lng": -97.7069,
+    "city": "austin-tx",
+    "state": "TX",
+    "hours": "Daily 5-11pm",
+    "phone": "(512) 601-5556",
+    "menuUrl": "https://gjiaustin.com",
+    "imageUrl": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800",
+    "tier": "unclaimed",
+    "claimedByUserId": null,
+    "stats": {
+      "impressions": 0,
+      "swipeRights": 0,
+      "matches": 0
+    }
+  },
+  {
+    "id": "clay-pit",
+    "name": "Clay Pit",
+    "cuisine": "Indian",
+    "priceRange": "$$$",
+    "address": "1601 Guadalupe St, Austin TX 78701",
+    "lat": 30.2788,
+    "lng": -97.7437,
+    "city": "austin-tx",
+    "state": "TX",
+    "hours": "Tue-Thu 5-10pm, Fri-Sat 5-11pm, Sun 5-9pm",
+    "phone": "(512) 555-1007",
+    "menuUrl": "https://example.com/menu/clay-pit",
+    "imageUrl": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800",
+    "tier": "unclaimed",
+    "claimedByUserId": null,
+    "stats": {
+      "impressions": 0,
+      "swipeRights": 0,
+      "matches": 0
+    }
+  },
+  {
+    "id": "pho-dan-toc",
+    "name": "Pho Dan Toc",
+    "cuisine": "Vietnamese",
+    "priceRange": "$",
+    "address": "10901 N Lamar Blvd, Austin TX 78753",
+    "lat": 30.3978,
+    "lng": -97.7093,
+    "city": "austin-tx",
+    "state": "TX",
+    "hours": "Mon-Sun 11am-9pm",
+    "phone": "(512) 555-1016",
+    "menuUrl": "https://example.com/menu/pho-dan-toc",
+    "imageUrl": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800",
+    "tier": "unclaimed",
+    "claimedByUserId": null,
+    "stats": {
+      "impressions": 0,
+      "swipeRights": 0,
+      "matches": 0
+    }
   }
 ]
